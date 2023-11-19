@@ -1,0 +1,248 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the header */
+header {
+    background-color: #48a7d7;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 2em;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color:#fff;
+    font-size: 1.3rem;
+}
+
+.header{
+    display:flex;
+    flex-direction: row;
+    max-height: 100px;
+    justify-content: space-evenly;
+    background-color: #333;
+    color:#fff;
+    box-sizing: border-box;
+    font-size: 1.3rem;
+
+}
+.Logo img{
+    max-height:95%;
+    width:auto;
+    padding:0.5%;
+    border-radius: 50%;
+}
+.img{
+    max-height:50vh;
+    width:90%;
+    align-self: center;
+    object-fit: contain;
+    padding:0.5%;
+    border-radius: 5px; 
+}
+.homepage{
+    background-color: #0c192c;
+    position:relative;
+    overflow: hidden;
+}
+.animationcontainer{
+    position: relative;
+    width:100%;
+    height:100vh;
+    overflow: hidden;
+}
+.bubbles{
+    position: relative;
+    display:flex;
+}
+
+.bubbles span{
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    background-color: #4fc3dc;
+    border-radius: 50%;
+    margin: 0 6px;
+    box-shadow: 0 0 10px #48a7d7,
+    0 0 50px #49b7c7,
+    0 0 100px #48a7c9;
+    animation: bubbles 20s linear infinite;
+    animation-duration: calc( 100s/ var(--i));
+}
+.bubbles span:nth-child(even){
+    background-color: #ff6b6b;
+    box-shadow: 0 0 10px #ff6ba4,
+    0 0 50px #ff6ba4,
+    0 0 100px #ff6ba4;
+}
+@keyframes bubbles {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    50% {
+        transform: translateY(40vh) scale(0.5);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+/* Style the hero section */
+.hero {
+    text-align: center;
+    background-image: url('images/cover.jpg'); /* Replace with your actual image URL */
+    background-size: cover;
+    color: #fff;
+    padding: 100px 0;
+    height:40%;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+}
+
+/* Style the announcement section */
+.announcement {
+    background-color: #f5f5f5;
+    text-align: center;
+    font-size: 1.3em;
+    padding: 20px 0;
+}
+
+.special-offer {
+    font-weight: bold;
+    color: #ff6b6b;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust column width as needed */
+    gap: 5px; 
+    padding:0.5em;
+    background-color: #48a7d7;
+  }
+  
+  .item {
+    aspect-ratio: 1 / 1; /* 1:1 aspect ratio (equal width and height) */
+    overflow: hidden; /* Ensure the image stays within the grid cell */
+  }
+  #gallery{
+    text-align: center;
+  }
+  .about{
+    background-color: wheat;
+
+  }
+  .item img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover; /* Maintain the image's aspect ratio while covering the entire container */
+  }
+  .contact-info{
+    font-size: 0.75em;
+    text-align: center;
+    background-color: wheat;
+    padding: 0 1em;
+    margin-top: 2em;
+    }
+.Services{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+       gap: 5px; 
+    padding:0.5em;
+    background-color:#ff6b6b;
+ 
+    }
+.Welcome{
+      text-align: center;
+        background-color: lavender;
+    }
+
+.Welcome p{
+        font-size: 1.33em;
+    }
+
+
+/*CONTACT US STYLES */
+.contact{
+    background-color: #48a7d7;
+    overflow-y: hidden;
+    font-size: 2em;
+}
+.socials{
+height:2em;
+width:1.5em;
+}
+.contactgrid{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-areas: 
+'picture contact contact'
+'picture welcome getintouch'
+'picture welcome getintouch';
+ padding:0.5em;
+}
+.item1{
+grid-area: picture;
+}
+.item2{
+grid-area: contact;
+text-align: center;
+color:#333;
+}
+.item2 h3{
+    font-size: 3.5em;
+    font-family: 'Times New Roman', Times, serif;
+}
+.item3{
+grid-area: welcome;
+color: #f5f5f5;
+}
+
+.item5{
+grid-area: getintouch;
+}
+#submit{
+    margin-left: 3em;
+}
+
+/*SERVICES */
+.Services img{
+    width:35em;
+    height:35em;
+    text-align: center;
+}
